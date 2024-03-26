@@ -20,8 +20,17 @@ import BoyRightHome from '../Screens/HumanRights/BoyRightHome'
 import BoyQuestionsScreen from '../Screens/HumanRights/BoyQuestionsScreen';
 import BoyResultScreen from '../Screens/HumanRights/BoyResultScreen';
 import { MaterialIcons } from '@expo/vector-icons';
-
-
+import Header from '../Screens/HomeScreen/Header';
+import QuizCategory from '../Screens/HumanRights/QuizCategory';
+import GirlHomeHealth from "../Screens/HumanRights/GirlHomeHealth";
+import GirlHomeLife from "../Screens/HumanRights/GirlHomeLife";
+import GirlHomeIdentity from "../Screens/HumanRights/GirlHomeIdentity";
+import GirlQuestionsHealth from "../Screens/HumanRights/GirlQuestionsHealth";
+import GirlQuestionsLife from "../Screens/HumanRights/GirlQuestionsLife";
+import GirlQuestionsIdentity from "../Screens/HumanRights/GirlQuestionsIdentity";
+import GirlHealthResult from "../Screens/HumanRights/GirlHealthResult";
+import GirlLifeResult from "../Screens/HumanRights/GirlLifeResult";
+import GirlIdentityResult from "../Screens/HumanRights/GirlIdentityResult";
 
 const Tab = createBottomTabNavigator();
 const Stack=createStackNavigator();
@@ -33,6 +42,8 @@ const MyStack=()=>{
          <Stack.Screen name='Home' component={HomeScreen} screenOptions={{headerShown:false}}/>
          <Stack.Screen name='Homeee' component={Home}/>
          <Stack.Screen name='Quiz' component={Quiz}/>
+         <Stack.Screen name='Header' component={Header}/>
+         <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
          <Stack.Screen name='Result' component={Result}/>
          <Stack.Screen name='ChildrightVideo' component={ChildrightVideo}/>
          <Stack.Screen name='ResultScreen' component={ResultScreen}/>
@@ -43,6 +54,16 @@ const MyStack=()=>{
         <Stack.Screen name='BoyRightHome' component={BoyRightHome}/>
         <Stack.Screen name='BoyQuestionsScreen' component={BoyQuestionsScreen}/>
         <Stack.Screen name='BoyResultScreen' component={BoyResultScreen}/>
+        <Stack.Screen name='QuizCategory' component={QuizCategory}/>
+        <Stack.Screen name='GirlHomeHealth' component={GirlHomeHealth}/>
+        <Stack.Screen name='GirlHomeLife' component={GirlHomeLife}/>
+        <Stack.Screen name='GirlHomeIdentity' component={GirlHomeIdentity}/>
+        <Stack.Screen name='GirlQuestionsHealth' component={GirlQuestionsHealth}/>
+        <Stack.Screen name='GirlQuestionsLife' component={GirlQuestionsLife}/>
+        <Stack.Screen name='GirlQuestionsIdentity' component={GirlQuestionsIdentity}/>
+        <Stack.Screen name='GirlHealthResult' component={GirlHealthResult}/>
+        <Stack.Screen name='GirlLifeResult' component={GirlLifeResult}/>
+        <Stack.Screen name='GirlIdentityResult' component={GirlIdentityResult}/>
     </Stack.Navigator>
   )
 }

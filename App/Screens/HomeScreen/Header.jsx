@@ -4,23 +4,29 @@ import { Text, View, Image, StyleSheet, Touchable } from 'react-native'
 import Colors from '../../Utils/Colors';
 import { FontAwesome } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Header() {
+  const navigation = useNavigation();
   const { user, isLoading } = useUser();
   return user && (
     <View style={styles.container}>
 
       <View style={styles.profileMainContainer}>
+        
         <View style={styles.profileContainer}>
           <View style={styles.imageCirle}>
+            <TouchableOpacity onPress={() => navigation && navigation.navigate("ProfileScreen")}>
             <Image source={{ uri: user?.imageUrl }}
               style={styles.userImage} />
+             </TouchableOpacity>
           </View>
-          <View>
+          <TouchableOpacity onPress={() => navigation && navigation.navigate("ProfileScreen")}>
             <Text style={{ color: Colors.WHITE, fontFamily: "outfit" }}>Welcome,</Text>
             <Text style={{ color: Colors.WHITE, fontSize: 20, fontFamily: "outfit-medium" }}>{user.fullName}</Text>
-          </View>
+          </TouchableOpacity>
         </View>
+        
         <TouchableOpacity style={{marginBottom:100,marginHorizontal:10}}>
             <FontAwesome name="bell" size={24} color="white" />
          </TouchableOpacity>

@@ -16,7 +16,7 @@ import { ScrollView } from 'react-native-gesture-handler'
 export default function HomeScreen({ navigation }) {
 
   return (
-    <View >
+    <View style={{marginTop:12}} >
       <ImageBackground source={require("../../../assets/images/rakk.jpg")} style={{ width: "100%", height: "100%", }}>
         <Header />
         <View  style={{marginTop:-25}}>
@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
            <Text style={{marginHorizontal:10,fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold",marginBottom:4,color:"#0B5FA5"}}>Child's Right Quiz</Text>
           <View style={{flexDirection:"row",alignItems:"center",justifyContent:"center",gap:16}}>
              
-             <TouchableOpacity onPress={()=>navigation.navigate("GirlRightScreen")}>
+             <TouchableOpacity onPress={()=>navigation.navigate("QuizCategory")}>
                  <GirlsRights/>
              </TouchableOpacity>
 

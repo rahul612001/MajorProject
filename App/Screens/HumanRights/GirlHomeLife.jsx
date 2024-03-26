@@ -12,10 +12,10 @@ export default function GirlRightScreen({ navigation }) {
       </ImageBackground>
 
       <View style={styles.container}>
-        <Text style={styles.title}>Girl Rights Education</Text>
+        <Text style={styles.title}>Girl Rights to Life </Text>
         <TouchableOpacity
           style={styles.startButton}
-          onPress={() => navigation.navigate('GirlQuestionsHealth', { questionIndex: 0 })}
+          onPress={() => navigation.navigate('GirlQuestionsLife', { questionIndex: 0 })}
         >
           <Text style={styles.startButtonText}>Start Quiz</Text>
         </TouchableOpacity>

@@ -33,6 +33,7 @@ export default function App() {
     'outfit-bold': require('./assets/fonts/Outfit-Bold.ttf'),
   });
   return (
+    
     <ClerkProvider 
     tokenCache={tokenCache}
     publishableKey='pk_test_c3RpcnJpbmctZnJvZy03My5jbGVyay5hY2NvdW50cy5kZXYk'>

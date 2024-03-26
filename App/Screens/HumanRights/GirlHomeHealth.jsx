@@ -1,18 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import LottieView from 'lottie-react-native'
+import LottieView from 'lottie-react-native';
+
 export default function GirlRightScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'space-between', marginTop: 30,}}>
+    <View style={{ flex: 1, justifyContent: 'space-between', marginTop: 30 }}>
       <ImageBackground source={require("../../../assets/images/human2234.png")} style={{ width: "100%", height: 260, marginTop: 5 }}>
-        <TouchableOpacity style={styles.Backbutton} onPress={()=>navigation.navigate("QuizCategory")}>
+        <TouchableOpacity style={styles.Backbutton} onPress={() => navigation.navigate("QuizCategory")}>
           <AntDesign name="left" size={20} color="#343A40" />
         </TouchableOpacity>
       </ImageBackground>
 
       <View style={styles.container}>
-        <Text style={styles.title}>Girl Rights Education</Text>
+        <Text style={styles.title}>Girl Rights to Health  </Text>
         <TouchableOpacity
           style={styles.startButton}
           onPress={() => navigation.navigate('GirlQuestionsHealth', { questionIndex: 0 })}
@@ -22,12 +23,12 @@ export default function GirlRightScreen({ navigation }) {
       </View>
 
       <LottieView
-            source={require("../../../assets/animations/LoudSpekers.json")}
-            style={{ width: 100, height: 100, justifyContent: "center", alignItems: "center",marginLeft:25 }}
-            resizeMode="contain"
-            loop
-            autoPlay={true}
-          />  
+        source={require("../../../assets/animations/LoudSpekers.json")}
+        style={{ width: 100, height: 100, justifyContent: "center", alignItems: "center", marginLeft: 25 }}
+        resizeMode="contain"
+        loop
+        autoPlay={true}
+      />
 
       <View style={{ alignItems: 'center', }}>
         <Image
@@ -36,7 +37,6 @@ export default function GirlRightScreen({ navigation }) {
         />
       </View>
     </View>
-
   );
 }
 
@@ -45,34 +45,33 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    marginBottom:-70
+    marginBottom: -70
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    
   },
   startButton: {
     backgroundColor: '#06718D',
     padding: 16,
-    justifyContent:"center",
-    alignItems:"center",
-    width:170,
-    borderRadius:20,
-    borderWidth:2,
-    borderRightWidth:6,
-    borderLeftColor:"red",
-    borderRightColor:"#FFA615",
-    borderTopColor:"#FFA615",
-    borderBottomColor:"#FFA615",
-    borderLeftWidth:6,
-    borderLeftColor:"#FFA615",
+    justifyContent: "center",
+    alignItems: "center",
+    width: 170,
+    borderRadius: 20,
+    borderWidth: 2,
+    borderRightWidth: 6,
+    borderLeftColor: "red",
+    borderRightColor: "#FFA615",
+    borderTopColor: "#FFA615",
+    borderBottomColor: "#FFA615",
+    borderLeftWidth: 6,
+    borderLeftColor: "#FFA615",
   },
   startButtonText: {
     color: 'white',
     fontSize: 16,
-    fontWeight:"600"
+    fontWeight: "600"
   },
   Backbutton: {
     backgroundColor: "white",
@@ -83,6 +82,5 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     alignItems: "center",
     justifyContent: "center",
-
   },
 });
