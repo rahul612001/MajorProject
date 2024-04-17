@@ -5,6 +5,8 @@ import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
 import Colors from '../Utils/Colors';
 import { FontAwesome } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import Quiz from '../Screens/Quiz';
 import Result from '../Screens/Result';
@@ -31,7 +33,33 @@ import GirlQuestionsIdentity from "../Screens/HumanRights/GirlQuestionsIdentity"
 import GirlHealthResult from "../Screens/HumanRights/GirlHealthResult";
 import GirlLifeResult from "../Screens/HumanRights/GirlLifeResult";
 import GirlIdentityResult from "../Screens/HumanRights/GirlIdentityResult";
-
+import TicTacToeScreen from "../Screens/Games/TicTacToeScreen";
+import HangmanGame from "../Screens/Hangman/HangmanGame";
+import QuizCategoryBoy from "../Screens/HumanRights/QuizCategoryBoy";
+import BoyHomeHealth from "../Screens/HumanRights/BoyHomeHealth";
+import BoyHomeLife from "../Screens/HumanRights/BoyHomeLife";
+import BoyQuestionsHealth from "../Screens/HumanRights/BoyQuestionsHealth";
+import BoyQuestionsLife from "../Screens/HumanRights/BoyQuestionsLife";
+import BoyHealthResult from "../Screens/HumanRights/BoyHealthResult";
+import BoyLifeResult from "../Screens/HumanRights/BoyLifeResult";
+import MathsHome from "../Screens/MathsHome"
+import MathsQuiz from "../Screens/MathsQuiz"
+import GkHome from "../Screens/GkHome"
+import GkQuiz from "../Screens/GkQuiz"
+import GeoHome from "../Screens/GeoHome"
+import GeoQuiz from "../Screens/GeoQuiz"
+import ComputerHome from "../Screens/ComputerHome"
+import ComputerQuiz from "../Screens/ComputerQuiz"
+import SportsHome from "../Screens/SportsHome"
+import SportQuiz from "../Screens/SportQuiz"
+import NatureHome from "../Screens/NatureHome"
+import NatureQuiz from "../Screens/NatureQuiz"
+import HistoryHome from "../Screens/HistoryHome"
+import HistoryQuiz from "../Screens/HistoryQuiz"
+import AnimalHome from "../Screens/AnimalHome"
+import AnimalQuiz from "../Screens/AnimalQuiz"
+import VideogameHome from "../Screens/VideogameHome"
+import VideogameQuiz from "../Screens/VideogameQuiz"
 const Tab = createBottomTabNavigator();
 const Stack=createStackNavigator();
 
@@ -64,6 +92,33 @@ const MyStack=()=>{
         <Stack.Screen name='GirlHealthResult' component={GirlHealthResult}/>
         <Stack.Screen name='GirlLifeResult' component={GirlLifeResult}/>
         <Stack.Screen name='GirlIdentityResult' component={GirlIdentityResult}/>
+        <Stack.Screen name='TicTacToeScreen' component={TicTacToeScreen} />
+        <Stack.Screen name='HangmanGame' component={HangmanGame} />
+        <Stack.Screen name='QuizCategoryBoy' component={QuizCategoryBoy} />
+        <Stack.Screen name='BoyHomeHealth' component={BoyHomeHealth} />
+        <Stack.Screen name='BoyHomeLife' component={BoyHomeLife} />
+        <Stack.Screen name='BoyQuestionsHealth' component={BoyQuestionsHealth} />
+        <Stack.Screen name='BoyQuestionsLife' component={BoyQuestionsLife} />
+        <Stack.Screen name='BoyHealthResult' component={BoyHealthResult} />
+        <Stack.Screen name='BoyLifeResult' component={BoyLifeResult} />
+        <Stack.Screen name='MathsHome' component={MathsHome} />
+        <Stack.Screen name='MathsQuiz' component={MathsQuiz} />
+        <Stack.Screen name='GkHome' component={GkHome} />
+        <Stack.Screen name='GkQuiz' component={GkQuiz} />
+        <Stack.Screen name='GeoHome' component={GeoHome} />
+        <Stack.Screen name='GeoQuiz' component={GeoQuiz} />
+        <Stack.Screen name='ComputerHome' component={ComputerHome} />
+        <Stack.Screen name='ComputerQuiz' component={ComputerQuiz} />
+        <Stack.Screen name='SportsHome' component={SportsHome} />
+        <Stack.Screen name='SportQuiz' component={SportQuiz} />
+        <Stack.Screen name='NatureHome' component={NatureHome} />
+        <Stack.Screen name='NatureQuiz' component={NatureQuiz} />
+        <Stack.Screen name='HistoryHome' component={HistoryHome} />
+        <Stack.Screen name='HistoryQuiz' component={HistoryQuiz} />
+        <Stack.Screen name='AnimalHome' component={AnimalHome} />
+        <Stack.Screen name='AnimalQuiz' component={AnimalQuiz} />
+        <Stack.Screen name='VideogameHome' component={VideogameHome} />
+        <Stack.Screen name='VideogameQuiz' component={VideogameQuiz} />
     </Stack.Navigator>
   )
 }
@@ -109,10 +164,10 @@ export default function TabNavigation() {
           <Tab.Screen name='Profile' component={ProfileScreen}
           options={{
             tabBarLabel:({color})=>(
-                <Text style={{color:color,fontSize:12,marginTop:-7}}>Profile</Text>
+                <Text style={{color:color,fontSize:12,marginTop:-7}}>Setting</Text>
             ),
             tabBarIcon:({color,size})=>(
-              <FontAwesome name="user-circle" size={size} color={color} />
+              <Ionicons name="settings" size={size} color={color} />
             ),
             tabBarStyle:{
               borderTopLeftRadius: 40,
@@ -120,9 +175,6 @@ export default function TabNavigation() {
               
             }
           }}/>
-
-
-
      </Tab.Navigator>
     )
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground, Image, Linking } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native'
 export default function GirlRightScreen({ navigation }) {

@@ -20,7 +20,7 @@ export default function GirlHealthResult({ route, navigation }) {
       <ImageBackground source={require("../../../assets/images/girlresult112.jpg")} style={{ height: "100%" }}>
         <View style={styles.container}>
           <View style={{ justifyContent: "center", alignItems: "center", marginHorizontal: 20 }}>
-            <Image source={resultBanner} style={{ width: "100%", height: 400, marginTop: -20 }} />
+            <Image source={resultBanner} style={{ width: 300, height: 400, marginTop: -20 }} />
           </View>
           <View style={styles.container}>
             <Text style={styles.result}>{isCorrect ? 'Correct!' : 'Incorrect!'}</Text>
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     fontFamily: "outfit-bold",
-    color: 'white',
+    //color: 'white',
   },
   nextButton: {
     backgroundColor: '#06718D',

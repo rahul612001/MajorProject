@@ -41,7 +41,7 @@ const Home = ({ navigation }) => {
             loop
             autoPlay={true}
           />
-          <Text style={styles.buttonText}>Start</Text>
+          <Text style={styles.buttonText}>Start Science Quiz</Text>
         </View>
       </TouchableOpacity>
           </View>
@@ -80,11 +80,11 @@ const styles = StyleSheet.create({
 
   },
   buttonText: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: "600",
     color: "white",
     marginLeft:10,
     alignItems:"center",
-    marginTop:14
+    marginTop:18
   }
 })

@@ -13,7 +13,7 @@ export default function BoyRightHome({ navigation }) {
       </ImageBackground>
 
       <View style={styles.container}>
-        <Text style={styles.title}>Boy Rights Quiz</Text>
+        <Text style={styles.title}>Boy Rights to Education</Text>
         <TouchableOpacity
           style={styles.startButton}
           onPress={() => navigation.navigate('BoyQuestionsScreen', { questionIndex: 0 })}

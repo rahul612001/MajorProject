@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ImageBackground } from 'react-native';
-
+import Loading from "../../../components/Loading";
 import { questions } from '../../../components/Health'; // questions are defined in a separate file
 
 export default function GirlHealthResult({ route, navigation }) {
@@ -13,6 +13,8 @@ export default function GirlHealthResult({ route, navigation }) {
       navigation.navigate('GirlHomeLife');
     }
   };
+
+
   const resultBanner = isCorrect ? require("../../../assets/images/trophy11.png") : require("../../../assets/images/loss112.png");
 
   return (
@@ -28,6 +30,13 @@ export default function GirlHealthResult({ route, navigation }) {
               <Text style={styles.nextButtonText}>{nextQuestionIndex < questions.length ? 'Next' : 'Finish'}</Text>
             </TouchableOpacity>
           </View>
+        </View>
+        <View>
+          {isCorrect?(
+            <View><Loading/></View>
+          ):(
+            <View><Loading/></View>
+          )}
         </View>
       </ImageBackground>
     </View>

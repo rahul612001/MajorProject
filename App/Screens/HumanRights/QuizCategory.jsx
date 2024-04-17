@@ -23,14 +23,14 @@ export default function QuizCategory({navigation}) {
       </View>
 
      
-      <View style={{ backgroundColor: "#EFEEFC",marginLeft:12,marginRight:12,borderRadius: 20}}>
+      <View style={{ backgroundColor: "#EFEEFC",marginLeft:12,marginRight:12,borderRadius: 20,marginTop:16}}>
        
 
-       <View style={{justifyContent:"center",alignItems:"center",marginTop:-20,}}>
+       <View style={{justifyContent:"center",alignItems:"center",marginTop:-30,}}>
        <Image source={{ uri: user.imageUrl }}
-            style={{ width: 90, height: 90, borderRadius: 99,backgroundColor:"#EFEEFC",borderWidth:10,borderColor:"#EFEEFC"}}
+            style={{ width: 90, height: 90, borderRadius: 99,backgroundColor:"#EFEEFC",borderWidth:5,borderColor:"white"}}
           />
-       </View>
+       </View>  
 
 
 

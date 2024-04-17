@@ -19,7 +19,7 @@ export default function GirlResultScreen({ route, navigation }) {
     <View>
       <ImageBackground source={require("../../../assets/images/girlresult112.jpg")} style={{height:"100%",}}>
       <View style={{justifyContent:"center",alignItems:"center",marginHorizontal:20}}>
-      <Image source={resultBanner} style={{width:"100%",height:400,marginTop:-20}}>
+      <Image source={resultBanner} style={{width:300,height:400,marginTop:-20}}>
       
       </Image>
       </View>

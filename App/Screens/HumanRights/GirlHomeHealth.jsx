@@ -16,7 +16,7 @@ export default function GirlRightScreen({ navigation }) {
         <Text style={styles.title}>Girl Rights to Health  </Text>
         <TouchableOpacity
           style={styles.startButton}
-          onPress={() => navigation.navigate('GirlQuestionsHealth', { questionIndex: 0 })}
+          onPress={() => navigation.navigate('BoyQuestionsHealth', { questionIndex: 0 })}
         >
           <Text style={styles.startButtonText}>Start Quiz</Text>
         </TouchableOpacity>

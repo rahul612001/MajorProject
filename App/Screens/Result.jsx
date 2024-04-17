@@ -19,7 +19,7 @@ const Result = ({ navigation, route }) => {
           style={{ width: "100%", height: 200, justifyContent: "center", alignItems: "center", }}
           resizeMode="contain"
           loop
-          autoPlay={true}
+          autoPlay={true}mov
         />
       </View>
       <Text style={{ fontSize: 30, fontFamily: "outfit-bold", justifyContent: "center", alignItems: "center", alignSelf: "center", color: "white" }}>Quiz Result</Text>
@@ -82,7 +82,7 @@ const Result = ({ navigation, route }) => {
           </TouchableOpacity>
         </View>
         <View>
-          <TouchableOpacity style={{backgroundColor:"#06D3F6",padding:15,marginTop:-80,borderRadius:16,marginLeft:10}} onPress={()=>navigation.navigate("Homeee")}>
+          <TouchableOpacity style={{backgroundColor:"#06D3F6",padding:15,marginTop:-80,borderRadius:16,marginLeft:10}} onPress={()=>navigation.navigate("Home")}>
                 <Text style={{fontSize:18,textAlign:"center",color:"white",fontWeight:"600"}}>Take New Quiz</Text>
           </TouchableOpacity>
         </View>

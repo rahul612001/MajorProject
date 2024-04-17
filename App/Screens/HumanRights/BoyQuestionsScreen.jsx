@@ -26,7 +26,7 @@ export default function BoyQuestionsScreen({ route, navigation }) {
         <TouchableOpacity style={styles.Backbutton} onPress={() => navigation.navigate("BoyRightHome")}>
           <AntDesign name="left" size={20} color="#343A40" />
         </TouchableOpacity>
-        <Text style={{ fontFamily: "outfit-bold", fontSize: 24, textAlign: "center", marginLeft: 65, color: "#343A40" }}>Boy's Right Quiz</Text>
+        <Text style={{ fontFamily: "outfit-bold", fontSize: 24, textAlign: "center", marginLeft: 65, color: "#343A40" }}>Boy Right Education</Text>
       </View>
 
       <View style={styles.container}>

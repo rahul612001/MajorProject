@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react'
 import { Text, Touchable, View ,StyleSheet,Image, ImageBackground} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-
+import Loading from "../../components/Loading";
 import { AntDesign } from '@expo/vector-icons';
 
 const shuffleArray=(array)=> {
@@ -87,7 +87,7 @@ const  Quiz= ({navigation})=>{
       
       <View style={styles.container}>
       <Text style={{ fontSize: 20, fontFamily: "outfit-bold" ,color:"#0B5FA5",marginTop:16}}>Question</Text>
-        {isLoading?<View style={{display:"flex",justifyContent:"center",alignItems:"center",height:"100%"}}><Text style={{fontSize:30,fontWeight:"700",color:"#76C893",alignItems:"center",justifyContent:"center",}}>Loading.....</Text></View>:questions&&
+        {isLoading?<View style={{display:"flex",justifyContent:"center",alignItems:"center",height:"100%",marginTop:-80}}><View><Loading/><Text style={{fontSize:30,fontWeight:"700",color:"#76C893",alignItems:"center",justifyContent:"center",}}>Loading.....</Text></View></View>:questions&&
         <View style={styles.parent} >
         <View style={styles.top}>
            <Text style={styles.question}>Q. {decodeURIComponent(questions[ques].question)}</Text>
