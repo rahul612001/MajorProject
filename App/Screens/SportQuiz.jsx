@@ -3,7 +3,8 @@ import { Text, Touchable, View ,StyleSheet,Image, ImageBackground} from 'react-n
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Loading from "../../components/Loading";
 import { AntDesign } from '@expo/vector-icons';
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Speech from 'expo-speech'
 const shuffleArray=(array)=> {
   for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -34,6 +35,9 @@ const  Quiz= ({navigation})=>{
 
   useEffect(()=>{
     getQuiz();
+    return () => {
+      Speech.stop();
+    };
   },[])
 
 
@@ -68,6 +72,20 @@ const  Quiz= ({navigation})=>{
     navigation.navigate('Result',{score:score})
    }
 
+   
+   const onPress=() => {
+    const question = decodeURIComponent(questions[ques].question);
+    const option1 = decodeURIComponent(options[0]);
+    const option2 = decodeURIComponent(options[1]);
+    const option3 = decodeURIComponent(options[2]);
+    const option4 = decodeURIComponent(options[3]);
+
+    // Concatenate the question and options into a single string
+    const textToSpeak = `${question}. Option 1: ${option1}. Option 2: ${option2}.Option 3: ${option3}. Option 4: ${option4}`;
+
+    // Speak the combined string using Speech.speak
+    Speech.speak(textToSpeak);
+}
 
 
 
@@ -86,7 +104,12 @@ const  Quiz= ({navigation})=>{
       </View>
       
       <View style={styles.container}>
-      <Text style={{ fontSize: 20, fontFamily: "outfit-bold" ,color:"#0B5FA5",marginTop:16}}>Question</Text>
+      <View style={{ justifyContent: "space-between", flexDirection: "row" }}>
+           <Text style={{ fontSize: 20, fontFamily: "outfit-bold" ,color:"#0B5FA5",marginTop:16}}>Question</Text>
+           <TouchableOpacity style={styles.Backbutton2} onPress={onPress}>
+              <MaterialCommunityIcons name="text-to-speech" size={24} color="#0B5FA5" />
+           </TouchableOpacity>
+        </View>
         {isLoading?<View style={{display:"flex",justifyContent:"center",alignItems:"center",height:"100%",marginTop:-80}}><View><Loading/><Text style={{fontSize:30,fontWeight:"700",color:"#76C893",alignItems:"center",justifyContent:"center",}}>Loading.....</Text></View></View>:questions&&
         <View style={styles.parent} >
         <View style={styles.top}>
@@ -198,6 +221,12 @@ const styles =StyleSheet.create({
   backgroundColor: "white",
   padding: 10,
   borderRadius: 99
+},
+Backbutton2: {
+  backgroundColor: "white",
+  padding: 10,
+  borderRadius: 99,
+  elevation:10
 },
 
 })
