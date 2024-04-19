@@ -60,11 +60,13 @@ import AnimalHome from "../Screens/AnimalHome"
 import AnimalQuiz from "../Screens/AnimalQuiz"
 import VideogameHome from "../Screens/VideogameHome"
 import VideogameQuiz from "../Screens/VideogameQuiz"
+import { useTranslation } from 'react-i18next';
 const Tab = createBottomTabNavigator();
 const Stack=createStackNavigator();
 
 
 const MyStack=()=>{
+ 
   return(
     <Stack.Navigator screenOptions={{headerShown:false}}>
          <Stack.Screen name='Home' component={HomeScreen} screenOptions={{headerShown:false}}/>
@@ -125,14 +127,14 @@ const MyStack=()=>{
 
 
 export default function TabNavigation() {
-  
+  const { t } = useTranslation(); 
     return (
      <Tab.Navigator screenOptions={{headerShown:false,tabBarActiveTintColor:"#1A769F"}}>
           
           <Tab.Screen name='HomeScreen' component={MyStack}
           options={{
             tabBarLabel:({color})=>(
-                <Text style={{color:color,fontSize:12,marginTop:-7}}>Home</Text>
+                <Text style={{color:color,fontSize:12,marginTop:-7}}>{t('Home')}</Text>
             ),
             tabBarIcon:({color,size})=>(
               <FontAwesome name="home" size={size} color={color} />
@@ -149,7 +151,7 @@ export default function TabNavigation() {
 <Tab.Screen name='Video' component={ChildrightVideo}
           options={{
             tabBarLabel:({color})=>(
-                <Text style={{color:color,fontSize:12,marginTop:-7}}>Videos</Text>
+                <Text style={{color:color,fontSize:12,marginTop:-7}}>{t('Videos')}</Text>
             ),
             tabBarIcon:({color,size})=>(
               <MaterialIcons name="video-library" size={24} color={color} />
@@ -164,7 +166,7 @@ export default function TabNavigation() {
           <Tab.Screen name='Profile' component={ProfileScreen}
           options={{
             tabBarLabel:({color})=>(
-                <Text style={{color:color,fontSize:12,marginTop:-7}}>Setting</Text>
+                <Text style={{color:color,fontSize:12,marginTop:-7}}>{t('Settings')}</Text>
             ),
             tabBarIcon:({color,size})=>(
               <Ionicons name="settings" size={size} color={color} />

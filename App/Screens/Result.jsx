@@ -1,11 +1,40 @@
 import React, { Component, } from 'react'
-import { Text, View, Image, StyleSheet, Touchable, } from 'react-native'
+import { Text, View, Image, StyleSheet, Touchable,Share ,Button} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import Title from '../../components/Title'
 import LottieView from 'lottie-react-native'
 import { FontAwesome } from '@expo/vector-icons';
-
+import nature from "../../assets/images/nature.png";
 const Result = ({ navigation, route }) => {
+
+ 
+  
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+        "👋👋Hey there! Just aced the quiz with a score of " + score + "!🏆🏆 Ready to play?🎯 "
+          
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+           console.log('shared with activity type of ',result.activityType)
+        } else {
+          // shared
+          console.log('shared')
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+        console.log('dismissed')
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
+
+
   const params = route.params
   const { score } = route.params
 
@@ -23,7 +52,7 @@ const Result = ({ navigation, route }) => {
         />
       </View>
       <Text style={{ fontSize: 30, fontFamily: "outfit-bold", justifyContent: "center", alignItems: "center", alignSelf: "center", color: "white" }}>Quiz Result</Text>
-
+      
       <View style={{ justifyContent: "center", alignItems: "center" }}>
         <LottieView
           source={require("../../assets/animations/trophy.json")}
@@ -76,7 +105,7 @@ const Result = ({ navigation, route }) => {
       </View>
       <View style={{flexDirection:"row",justifyContent:"center"}}>
         <View style={{marginRight:30}}>
-          <TouchableOpacity style={{backgroundColor:"white",padding:15,marginTop:-80,borderRadius:16,flexDirection:"row",justifyContent:"center",alignItems:"center",}}>
+          <TouchableOpacity style={{backgroundColor:"white",padding:15,marginTop:-80,borderRadius:16,flexDirection:"row",justifyContent:"center",alignItems:"center",}} onPress={onShare}>
                <FontAwesome name="share-alt" size={22} color="#1C2342" />
                 <Text style={{fontSize:18,textAlign:"center",color:"#1C2342",fontWeight:"600",marginLeft:10}}>Share Result</Text>
           </TouchableOpacity>

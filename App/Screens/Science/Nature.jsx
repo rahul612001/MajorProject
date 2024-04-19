@@ -4,7 +4,9 @@ import Firstani from '../../../components/ScienAnimation'
 import { FontAwesome } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native'
 import ScienAnimation from '../../../components/ScienAnimation';
+import { useTranslation } from 'react-i18next';
 export default function ScienceCategory (){
+  const { t } = useTranslation();
     return (
       <View>
         <View style={styles.container}>
@@ -15,7 +17,7 @@ export default function ScienceCategory (){
             loop
             style={{ width: 100, height:100,}}/>
           </View>
-          <Text style={{marginLeft:10,fontSize:18,fontWeight:"700",fontFamily:"outfit-bold",color:"#38B7BD"}}>Nature</Text>
+          <Text style={{marginLeft:10,fontSize:18,fontWeight:"700",fontFamily:"outfit-bold",color:"#38B7BD"}}>{t('Nature')}</Text>
           <Text style={{marginLeft:10,fontSize:16,fontWeight:"500",fontFamily:"outfit-medium",color:"#38B7BD"}}> 10 Questions </Text>
           <View style={{alignItems:"flex-end",justifyContent:"flex-end"}}>
              <View style={styles.button} >

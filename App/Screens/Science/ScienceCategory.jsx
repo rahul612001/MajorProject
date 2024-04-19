@@ -3,14 +3,16 @@ import { Text, View ,StyleSheet} from 'react-native'
 import Firstani from '../../../components/ScienAnimation'
 import { FontAwesome } from '@expo/vector-icons';
 import ScienAnimation from '../../../components/ScienAnimation';
+import { useTranslation } from 'react-i18next';
 export default function ScienceCategory (){
+  const { t } = useTranslation(); 
     return (
       <View>
         <View style={styles.container}>
          <View style={{alignItems:"center",justifyContent:"center",margin:10}}>
             <ScienAnimation/>
           </View>
-          <Text style={{marginLeft:10,fontSize:20,fontWeight:"700",fontFamily:"outfit-bold",color:"#206CE4"}}> Science </Text>
+          <Text style={{marginLeft:10,fontSize:20,fontWeight:"700",fontFamily:"outfit-bold",color:"#206CE4"}}>{t('Science')}</Text>
           <Text style={{marginLeft:10,fontSize:16,fontWeight:"500",fontFamily:"outfit-medium",color:"#5396E4"}}> 10 Questions </Text>
           <View style={{alignItems:"flex-end",justifyContent:"flex-end"}}>
              <View style={styles.button} >

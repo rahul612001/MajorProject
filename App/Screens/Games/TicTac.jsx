@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Text, View ,Image, ImageBackground,StyleSheet} from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native'
+import { useTranslation } from 'react-i18next';
 export default function TicTac () {
-
+  const { t } = useTranslation(); 
     return (
+     
       <View>
        <View style={{backgroundColor:"#FAE2E2",marginHorizontal:20,padding:10,borderColor:"white",borderWidth:2, elevation: 20,
          shadowColor: 'black',
@@ -19,7 +21,7 @@ export default function TicTac () {
 
 
             <ImageBackground source={require("../../../assets/images/Ticback2.png")} style={{width:260,height:40,flexDirection:"row"}}>
-               <Text style={{fontSize:20,fontFamily:"outfit-bold",color:"#D63F57",marginLeft:10,marginTop:7}}>Tic Tac Toe Game</Text>
+               <Text style={{fontSize:20,fontFamily:"outfit-bold",color:"#D63F57",marginLeft:10,marginTop:7}}>{t('Tic Tac Toe Game')}</Text>
                <View style={styles.button} >
                         <FontAwesome name="long-arrow-right" size={20} color="#D63F57" />
                     </View>

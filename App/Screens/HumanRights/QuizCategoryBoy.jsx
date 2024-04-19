@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import { Text, Touchable, View, StyleSheet, Image, ImageBackground } from 'react-native'
+import { Text, Touchable, View, StyleSheet, Image, ImageBackground ,Modal} from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler'
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
 import { useUser } from '@clerk/clerk-expo'
+
+
+import i18next from "i18next";
+import {  useTranslation} from "react-i18next";
+
+
 export default function QuizCategory({navigation}) {
   const { user } = useUser();
   return (
@@ -140,9 +146,8 @@ export default function QuizCategory({navigation}) {
      
       </View>
    
-
-
       </ScrollView>
+
     </View>
   )
 }

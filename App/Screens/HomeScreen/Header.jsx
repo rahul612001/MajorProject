@@ -6,7 +6,11 @@ import { FontAwesome } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
+
+import { useTranslation } from 'react-i18next';
+
 export default function Header() {
+  const { t } = useTranslation(); 
   const navigation = useNavigation();
   const { user, isLoading } = useUser();
   return user && (
@@ -22,7 +26,7 @@ export default function Header() {
              </TouchableOpacity>
           </View>
           <TouchableOpacity onPress={() => navigation && navigation.navigate("ProfileScreen")}>
-            <Text style={{ color: Colors.WHITE, fontFamily: "outfit" }}>Welcome,</Text>
+            <Text style={{ color: Colors.WHITE, fontFamily: "outfit" }}>{t('welcome')}</Text>
             <Text style={{ color: Colors.WHITE, fontSize: 20, fontFamily: "outfit-medium" }}>{user.fullName}</Text>
           </TouchableOpacity>
         </View>

@@ -14,8 +14,6 @@ const shuffleArray=(array)=> {
 }
 
 
-
-
 const  Quiz= ({navigation})=>{
       const [questions,setQuestions]=useState();
       const  [ques,setQues]=useState(0)

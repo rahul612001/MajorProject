@@ -21,10 +21,11 @@ import Geography from "../Science/Geography";
 import History from "../Science/History";
 import Animals from "../Science/Animals";
 import VideoGame from "../Science/VideoGame";
-
+import { useTranslation } from 'react-i18next';
 
 export default function HomeScreen({ navigation }) {
 
+  const { t } = useTranslation(); 
   const [showAll, setShowAll] = useState(false);
 
   const handleViewAll = () => {
@@ -46,7 +47,7 @@ export default function HomeScreen({ navigation }) {
 
            
           <ScrollView showsVerticalScrollIndicator={false} >
-           <Text style={{marginHorizontal:10,fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold",marginBottom:4,color:"#0B5FA5"}}>Child's Right Quiz</Text>
+           <Text style={{marginHorizontal:10,fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold",marginBottom:4,color:"#0B5FA5"}}>{t('Childs Rights Quiz')}</Text>
           <View style={{flexDirection:"row",alignItems:"center",justifyContent:"center",gap:16}}>
              
              <TouchableOpacity onPress={()=>navigation.navigate("QuizCategory")}>
@@ -60,7 +61,7 @@ export default function HomeScreen({ navigation }) {
           
       
         <View>
-        <Text style={{ fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold", marginTop: 10,marginLeft:10,color:"#0B5FA5" }}>Games</Text>
+        <Text style={{ fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold", marginTop: 10,marginLeft:10,color:"#0B5FA5" }}>{t('Games')}</Text>
         <TouchableOpacity onPress={()=>navigation.navigate("TicTacToeScreen")} >
          <TicTac/>
          </TouchableOpacity>
@@ -73,7 +74,7 @@ export default function HomeScreen({ navigation }) {
 
         <View style={{ marginHorizontal: 10 }}>
           <View style={{ justifyContent: "space-between", flexDirection: "row" }}>
-            <Text style={{ fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold", marginTop: 10, }}>Top Quiz Categories</Text>
+            <Text style={{ fontSize: 24, fontWeight: "600", fontFamily: "outfit-bold", marginTop: 10, }}>{t('Top Quiz Categories')}</Text>
             {showAll ? (
             <TouchableOpacity onPress={handleViewLess}>
             <View style={styles.viewButton}>

@@ -1,0 +1,38 @@
+{
+  "en": {
+    "nativeName": "English"
+    
+  },
+  "sv": {
+    "nativeName": "Svenska"
+  },
+  "hi": {
+    "nativeName": "हिंदी"
+  },
+  "gu": {
+    "nativeName": "ગુજરાતી"
+  },
+  "pu": {
+    "nativeName": "ਪੰਜਾਬੀ"
+  },
+  "bn": {
+    "nativeName": "বাংলা"
+  },
+  "ma": {
+    "nativeName": "मराठी"
+  },
+  "tu": {
+    "nativeName": "తెలుగు"
+  },
+  "ta": {
+    "nativeName": "தமிழ்"
+  },
+  "ur": {
+    "nativeName": "اردو"
+  },
+  "od": {
+    "nativeName": "ଓଡିଆ"
+  }
+
+
+}

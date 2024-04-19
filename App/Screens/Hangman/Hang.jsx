@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Text, View ,Image, ImageBackground,StyleSheet} from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native'
+import { useTranslation } from 'react-i18next';
 export default function Hang () {
-
+  const { t } = useTranslation(); 
     return (
       <View>
        <View style={{backgroundColor:"#FAEFDC",marginHorizontal:20,padding:10,borderColor:"white",borderWidth:2, elevation: 20,
@@ -17,9 +18,10 @@ export default function Hang () {
               loop
              style={{ width: 40, height:40,}}/>
 
-
+   
             <ImageBackground source={require("../../../assets/images/hangg.png")} style={{width:260,height:40,flexDirection:"row"}}>
-               <Text style={{fontSize:20,fontFamily:"outfit-bold",color:"#C5851C",marginLeft:10,marginTop:7}}>Hangman Game</Text>
+                
+               <Text style={{fontSize:20,fontFamily:"outfit-bold",color:"#C5851C",marginLeft:10,marginTop:7}}>{t('Hangman Game')}</Text>
                <View style={styles.button} >
                         <FontAwesome name="long-arrow-right" size={20} color="#C5851C" />
                     </View>
