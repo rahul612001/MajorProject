@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     padding: 10,
     borderRadius: 99,
-    backgroundColor: '#3F4E6B', // Optional background color
+    backgroundColor: '#1067CD', 
   },
   title: {
     flex: 1,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     textAlign: 'center',
     justifyContent:"center",
-    color: '#343A40',
+    color: '#1067CD',
   },
 });
 

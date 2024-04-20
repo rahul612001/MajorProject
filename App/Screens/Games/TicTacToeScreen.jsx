@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
   input: {
     width: 300,
     height: 50,
-    borderColor: 'gray',
+    borderColor: '#58CBC6',
     borderWidth: 2,
     marginBottom: 10,
     paddingHorizontal: 10,
@@ -136,19 +136,30 @@ const styles = StyleSheet.create({
   playerTurn: {
     fontSize: 24,
     marginBottom: 10,
+    color:"#58CBC6"
   },
   result: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
+    color:"#1067CD"
   },
   button: {
     marginTop: 20,
     padding: 16,
-    backgroundColor: '#3F4E6B',
     borderRadius: 20,
     width: 280,
     alignItems: 'center',
+    backgroundColor: '#1067CD',
+    borderRadius: 20,
+    borderWidth: 2,
+    borderRightWidth: 6,
+    borderLeftColor: "red",
+    borderRightColor: "#58CBC6",
+    borderTopColor: "#58CBC6",
+    borderBottomColor: "#58CBC6",
+    borderLeftWidth: 6,
+    borderLeftColor: "#58CBC6",
   },
   buttonText: {
     color: 'white',
