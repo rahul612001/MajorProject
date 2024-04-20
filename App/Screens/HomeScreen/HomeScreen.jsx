@@ -20,6 +20,7 @@ import Sports from "../Science/Sports";
 import Geography from "../Science/Geography";
 import History from "../Science/History";
 import Animals from "../Science/Animals";
+import MemoryGame from "../MemoryGame/MemoryGame";
 import VideoGame from "../Science/VideoGame";
 import { useTranslation } from 'react-i18next';
 
@@ -68,6 +69,10 @@ export default function HomeScreen({ navigation }) {
 
          <TouchableOpacity onPress={()=>navigation.navigate("HangmanGame")} style={{marginTop:10}} >
            <Hang/>
+         </TouchableOpacity>
+
+         <TouchableOpacity onPress={()=>navigation.navigate("GameScreen")} style={{marginTop:10}} >
+           <MemoryGame/>
          </TouchableOpacity>
          </View>
 

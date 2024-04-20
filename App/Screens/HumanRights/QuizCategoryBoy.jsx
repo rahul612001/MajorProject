@@ -124,7 +124,7 @@ export default function QuizCategory({navigation}) {
 
 
 
-      <TouchableOpacity style={{ backgroundColor: "#EFEEFC", padding: 10, mmarginHorizontal: 1, borderRadius: 20,marginBottom:10 }}>
+      <TouchableOpacity style={{ backgroundColor: "#EFEEFC", padding: 10, mmarginHorizontal: 1, borderRadius: 20,marginBottom:10 }} >
         <View style={{ flexDirection: "row", alignItems: "center", backgroundColor: "white", padding: 16, marginHorizontal: 14, borderRadius: 20 }}>
           <View style={{ borderColor: "#EFEEFC", borderWidth: 2, width: 25, height: 25, borderRadius: 100, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center', marginLeft: 10 }}>
             <Text style={{ fontSize: 14, fontWeight: 'bold',color:"#282828" }}>5</Text>
@@ -133,7 +133,7 @@ export default function QuizCategory({navigation}) {
           <View style={{ flexDirection: "row", gap: 20,justifyContent:"center",alignItems:"center" }}>
             <Image source={require("../../../assets/images/protection.png")} style={{ justifyContent: "center",  width: 50, height: 50,  borderRadius: 100, marginLeft: 20 }} />
             <View>
-              <Text style={{fontFamily:"outfit-medium",fontSize:14}}>Right to protection</Text>
+              <Text style={{fontFamily:"outfit-medium",fontSize:14}}>Right to protectionkkk</Text>
               <Text style={{fontSize:14,fontFamily:"outfit-medium",color:"#908F9D"}}>100 points</Text>
             </View>
           </View>

@@ -60,6 +60,7 @@ import AnimalHome from "../Screens/AnimalHome"
 import AnimalQuiz from "../Screens/AnimalQuiz"
 import VideogameHome from "../Screens/VideogameHome"
 import VideogameQuiz from "../Screens/VideogameQuiz"
+import GameScreen from "../Screens/MemoryGame/GameScreen"
 import { useTranslation } from 'react-i18next';
 const Tab = createBottomTabNavigator();
 const Stack=createStackNavigator();
@@ -121,6 +122,7 @@ const MyStack=()=>{
         <Stack.Screen name='AnimalQuiz' component={AnimalQuiz} />
         <Stack.Screen name='VideogameHome' component={VideogameHome} />
         <Stack.Screen name='VideogameQuiz' component={VideogameQuiz} />
+        <Stack.Screen name='GameScreen' component={GameScreen} />
     </Stack.Navigator>
   )
 }
